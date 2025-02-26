@@ -25,3 +25,11 @@
 .sidebar-link{
     @apply hover:text-red-400;
 }
+
+/*Dashboard design*/
+
+/*Aside design*/
+
+.aside-nav{
+    @apply flex items-center space-x-2 hover:bg-blue-700 hover:text-black transition-all duration-300 p-2 rounded font-serif;
+}
