@@ -7,3 +7,9 @@ const sidebar = document.querySelector("#bar");
           e.preventDefault();
           sidebar.classList.remove("translate-x-full"); // Slide in
         });
+
+        // Close Sidebar
+        closeSidebar.addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar.classList.add("translate-x-full"); // Slide out
+          });
