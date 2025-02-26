@@ -8,8 +8,23 @@
   </head>
   <body class="">
     <header>
-      <!--Top Navigation Bar-->
       <nav class="bg-white shadow-2xl shadow-[rgba(0,0,0,0.1)] relative">
+        <!-- Sidebar -->
+        <ul id="bar" class="fixed top-0 right-0 h-screen w-[250px] bg-white shadow-lg transition-transform duration-300 transform translate-x-full flex-col p-5 backdrop-blur-lg">
+          <li class="w-full flex justify-end">
+            <button class="p-2 cursor-pointer" id="closeSidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+          </li>
+          <li><a href="#" class="link">Home</a></li>
+          <li><a href="index1.html" class="link">Dashboard</a></li>
+          <li><a href="#" class="link">About Us</a></li>
+          <li><a href="#" class="link">Log-Out</a></li>
+        </ul>
+        <!--Top Navigation Bar-->
         <ul class="w-full flex justify-end items-center p-3">
           <li class="mr-auto">
             <a href="#" class="h-full px-6 py-0 flex items-center font-bold text-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text">

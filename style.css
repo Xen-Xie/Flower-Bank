@@ -1,8 +1,27 @@
 @import "tailwindcss";
 /*Top nav design*/
+
 .list{
     @apply h-[50px];
 }
 .link{
     @apply h-full px-[30px] py-0 flex items-center text-black font-mono hover:bg-[#f0f0f0] transition-all duration-300;
+}
+
+/*Side nav design*/
+
+.sidebar {
+    @apply fixed top-0 right-0 h-[100vh] w-[250px] z-[999] bg-white shadow-lg transition-transform duration-300 transform translate-x-full hidden flex-col p-5 backdrop-blur-lg;
+}
+
+.sidebar.show {
+    @apply translate-x-0 flex;
+}
+
+.sidebar-li{
+    @apply w-[100%];
+}
+
+.sidebar-link{
+    @apply hover:text-red-400;
 }
