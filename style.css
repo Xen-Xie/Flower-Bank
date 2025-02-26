@@ -1,0 +1,8 @@
+@import "tailwindcss";
+/*Top nav design*/
+.list{
+    @apply h-[50px];
+}
+.link{
+    @apply h-full px-[30px] py-0 flex items-center text-black font-mono hover:bg-[#f0f0f0] transition-all duration-300;
+}
