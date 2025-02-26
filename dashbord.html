@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100 font-sans">
     <div class="flex h-screen">
+        <!--Hamburger Menu-->
+        <button id="menu-button" class="absolute top-4 left-4 p-2 text-white rounded-md md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
         <!-- Sidebar -->
-        <aside id="sidebar" class="w-64 bg-blue-900 text-white p-6 flex flex-col fixed h-full md:relative md:flex transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+        <aside id="asideBar" class="w-64 bg-blue-900 text-white p-6 flex flex-col fixed h-full md:relative md:flex transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            <button class="p-2 cursor-pointer" id="closeAside">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             <div class="flex items-center space-x-3 mb-8">
                 <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
                     <span class="text-blue-900 font-bold text-xl  cursor-pointer">JD</span>
@@ -39,12 +47,26 @@
                     <span class="text-white"><i class="fa-solid fa-money-bill-trend-up"></i> Withdraw Money</span>
                 </a>
                 <a href="#" class="aside-nav">
-                    <span class="text-white"><i class="fa-solid fa-receipt"></i> Transition History</span>
+                    <span class="text-white"><i class="fa-solid fa-receipt"></i> Transaction History</span>
                 </a>
                 
             </nav>
         </aside>
-
-        
+    </div>
+    <script>const menuButton = document.getElementById("menu-button");
+        const asideBar = document.getElementById("asideBar");
+        const closeButton = document.getElementById("closeAside");
+    
+        // Open Sidebar
+        menuButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            asideBar.classList.toggle("-translate-x-full"); // Toggle sidebar visibility
+        });
+    
+        // Close Sidebar
+        closeButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            asideBar.classList.add("-translate-x-full"); // Hide sidebar
+        });</script>
 </body>
 </html>
