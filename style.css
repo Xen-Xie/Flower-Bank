@@ -31,5 +31,5 @@
 /*Aside design*/
 
 .aside-nav{
-    @apply flex items-center space-x-2 hover:bg-blue-700 hover:text-black transition-all duration-300 p-2 rounded font-serif;
+    @apply flex items-center space-x-2 hover:bg-[#d8d8d8f1] hover:text-black transition-all duration-300 p-2 rounded font-serif;
 }
