@@ -9,20 +9,20 @@
 </head>
 <body class="bg-gray-100 font-sans">
     <section class="container grid grid-cols-12 md:gap-[120px] gap-0">
-    <div class="flex h-screen">
-        <!--Hamburger Menu-->
-        <button id="menu-button" class="absolute top-4 left-4 p-2 text-white rounded-md md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-        </button>
-        <!-- Sidebar -->
-        <aside id="asideBar" class="cos-span-2 w-64 bg-blue-900 text-white p-6 flex flex-col fixed h-full md:relative md:flex transform -translate-x-full md:translate-x-0 transition-transform duration-300">
-            <button class="p-2 cursor-pointer md:hidden flex" id="closeAside">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+        <div class="flex h-screen">
+            <!--Hamburger Button-->
+            <button id="menu-button" class="absolute top-4 left-4 p-2 text-white rounded-md md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+        <!-- Sidebar Start -->
+            <aside id="asideBar" class="cos-span-2 w-64 bg-blue-900 text-white p-6 flex flex-col fixed h-full md:relative md:flex transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+                <button class="p-2 cursor-pointer md:hidden flex" id="closeAside">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
               </button>
-            <div class="flex items-center space-x-3 mb-8">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                <div class="flex items-center space-x-3 mb-8">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
                     <span class="text-blue-900 font-bold text-xl  cursor-pointer">JD</span>
                 </div>
                 <div>
@@ -54,7 +54,7 @@
             </nav>
         </aside>
     </div>
-    <!-- Main Content -->
+    <!-- Main Content Start-->
     <main class="col-span-10 p-8 md:mx-[125px] mx-0">
         <h1 class="text-4xl font-semibold mb-6 text-center">Account Dashboard</h1>
         <div class="grid grid-cols-6 gap-3 mb-6">
@@ -67,31 +67,33 @@
                 <h2 class="text-2xl font-bold">0 times</h2>
             </div>
         </div>
-        <!-- Add Money -->
-        <section id="add-money" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <!-- Add Money Area-->
+            <section id="add-money" class="bg-white p-6 rounded-lg shadow-lg mb-6">
             
-            <h2 class="text-xl font-semibold mb-5 text-center">Add Money</h2>
-            <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-blue-300 focus:outline-blue-200" autocomplete="off" id="amount">
-            <button class="bg-blue-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-blue-400 uppercase ease-in" id="addMoneyBtn">Add Money</button>
-        </section>
-        <!-- Withdraw Money -->
-        <section id="withdraw-money" class="bg-white p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-xl font-semibold mb-3 text-center">Withdraw Money</h2>
-            <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-red-300 focus:outline-red-200 md:col-span-3 col-span-12" autocomplete="off" id="withdrawAmount">
-            <button class="bg-red-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-red-400 uppercase ease-in" id="withdrawMoneyBtn">Withdraw Money</button>
-        </section>
-        <!-- Transaction History -->
-        <section id="transaction-history" class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="mt-4 hidden" id="transactions">
+                <h2 class="text-xl font-semibold mb-5 text-center">Add Money</h2>
+                <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-blue-300 focus:outline-blue-200" autocomplete="off" id="amount">
+                <button class="bg-blue-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-blue-400 uppercase ease-in" id="addMoneyBtn">Add Money</button>
+            </section>
+        <!-- Withdraw Money Area-->
+            <section id="withdraw-money" class="bg-white p-6 rounded-lg shadow-lg mb-6">
+                <h2 class="text-xl font-semibold mb-3 text-center">Withdraw Money</h2>
+                <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-red-300 focus:outline-red-200 md:col-span-3 col-span-12" autocomplete="off" id="withdrawAmount">
+                <button class="bg-red-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-red-400 uppercase ease-in" id="withdrawMoneyBtn">Withdraw Money</button>
+            </section>
+        <!-- Transaction History Area-->
+            <section id="transaction-history" class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="mt-4 hidden" id="transactions">
                     <h2 class="text-xl font-semibold mb-2">Transaction History</h2>
                     <ul id="transactionList" class="text-left bg-gray-50 p-2 rounded"></ul>
+                    </div>
                 </div>
-            </div>
-            <button class="bg-green-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-green-400 uppercase ease-in" id="showTransactionsBtn">Transaction History</button>
-        </section>  
+                    <button class="bg-green-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-green-400 uppercase ease-in" id="showTransactionsBtn">Transaction History</button>
+            </section>  
     </main>
-</section>
-    <script>const menuButton = document.getElementById("menu-button");
+    </section>
+    <script>
+        //Sidebar Modal logic
+        const menuButton = document.getElementById("menu-button");
         const asideBar = document.getElementById("asideBar");
         const closeButton = document.getElementById("closeAside");
     
@@ -108,7 +110,8 @@
         });
 
         // Add Money Modal Logic
-        document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener('DOMContentLoaded', function () {
     loadData(); // Load saved data
     updateUI(); // Update UI with stored values
 
@@ -117,27 +120,27 @@
     document.getElementById('showTransactionsBtn').addEventListener('click', showTransactions);
 });
 
-function loadData() {
-    let storedBalance = localStorage.getItem('balance');
-    let storedTransactions = localStorage.getItem('transactions');
+    function loadData() {
+        let storedBalance = localStorage.getItem('balance');
+        let storedTransactions = localStorage.getItem('transactions');
 
-    if (storedBalance !== null) {
+        if (storedBalance !== null) {
         balance = parseFloat(storedBalance);
-    }
+        }
 
-    if (storedTransactions !== null) {
+        if (storedTransactions !== null) {
         transactions = JSON.parse(storedTransactions);
+        }
     }
-}
 
-let balance = 0;
-let transactions = [];
+    let balance = 0;
+    let transactions = [];
 
-function addMoney() {
-    let amount = parseFloat(document.getElementById('amount').value);
-    if (amount > 0) {
-        balance += amount;
-        transactions.push({ type: 'Add', amount: amount, date: new Date().toLocaleString() });
+    function addMoney() {
+        let amount = parseFloat(document.getElementById('amount').value);
+        if (amount > 0) {
+            balance += amount;
+            transactions.push({ type: 'Add', amount: amount, date: new Date().toLocaleString() });
 
         saveData(); // Save updated balance & transactions
         updateUI();
@@ -147,14 +150,14 @@ function addMoney() {
 }
   //Withdraw Function
 
-function withdrawMoney() {
-    let amount = parseFloat(document.getElementById('withdrawAmount').value);
-    if (isNaN(amount) || amount <= 0) {
+    function withdrawMoney() {
+        let amount = parseFloat(document.getElementById('withdrawAmount').value);
+        if (isNaN(amount) || amount <= 0) {
         alert('Please enter a valid amount');
         return;
-    }
+        }
 
-    if (amount > balance) {
+        if (amount > balance) {
         alert('Insufficient funds');
         return;
     }
