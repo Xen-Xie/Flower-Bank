@@ -47,7 +47,7 @@
                 <a href="#withdraw-money" class="aside-nav">
                     <span class="text-white"><i class="fa-solid fa-money-bill-trend-up"></i> Withdraw Money</span>
                 </a>
-                <a href="#" class="aside-nav">
+                <a href="#transaction-history" class="aside-nav">
                     <span class="text-white"><i class="fa-solid fa-receipt"></i> Transaction History</span>
                 </a>
                 
@@ -77,8 +77,17 @@
         <!-- Withdraw Money -->
         <section id="withdraw-money" class="bg-white p-6 rounded-lg shadow-lg mb-6">
             <h2 class="text-xl font-semibold mb-3 text-center">Withdraw Money</h2>
-            <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-red-300 focus:outline-red-200 md:col-span-3 col-span-12">
-            <button class="bg-red-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-red-400 uppercase ease-in">Withdraw Money</button>
+            <input type="number" placeholder="Enter amount" class="border p-2 w-full mb-3 rounded-xl caret-red-300 focus:outline-red-200 md:col-span-3 col-span-12" autocomplete="off">
+            <button class="bg-red-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-red-400 uppercase ease-in" id="withdrawMoneyBtn">Withdraw Money</button>
+        </section>
+        <!-- Transaction History -->
+        <section id="transaction-history" class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mt-4 hidden" id="transactions">
+                    <h2 class="text-xl font-semibold mb-2">Transaction History</h2>
+                    <ul id="transactionList" class="text-left bg-gray-50 p-2 rounded"></ul>
+                </div>
+            </div>
+            <button class="bg-green-600 text-white p-2 rounded w-full font-[450] transition-all duration-500 hover:text-black cursor-pointer hover:bg-green-400 uppercase ease-in" id="withdrawMoneyBtn">Transaction History</button>
         </section>  
     </main>
 </section>
