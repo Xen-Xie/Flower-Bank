@@ -137,8 +137,36 @@ function withdrawMoney() {
         alert('Insufficient funds');
         return;
     }
-    
-}  
+
+// Process withdrawal
+balance -= amount;
+    transactions.push({ type: 'Withdraw', amount: amount, date: new Date().toLocaleString() });
+
+    saveData(); // Save updated balance & transactions
+    updateUI();
+}
+function saveData() {
+    localStorage.setItem('balance', balance);
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+}
+
+function updateUI() {
+    document.getElementById('balance').innerText = balance;
+    document.getElementById('amount').value = '';
+    document.getElementById('withdrawAmount').value = '';
+}
+
+function showTransactions() {
+    let transactionList = document.getElementById('transactionList');
+    transactionList.innerHTML = '';
+    transactions.forEach(trx => {
+        let li = document.createElement('li');
+        li.textContent = `${trx.date} - ${trx.type}: $${trx.amount}`;
+        transactionList.appendChild(li);
+    });
+    document.getElementById('transactions').classList.remove('hidden');
+}
+
         </script>
 </body>
 </html>
